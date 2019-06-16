@@ -36,12 +36,7 @@ public class WeatherObservable implements WeatherSubject {
     }
 
     private boolean measureChanged(float temperature, float humidity, float pressure) {
-        if (temperature == this.getTemperature()
-                && humidity == this.getHumidity()
-                && pressure == this.getPressure()) {
-            return false;
-        }
-        return true;
+        return temperature != this.getTemperature() || humidity != this.getHumidity() || pressure != this.getPressure();
     }
 
     @Override

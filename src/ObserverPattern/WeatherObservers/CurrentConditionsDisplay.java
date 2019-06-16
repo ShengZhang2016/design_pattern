@@ -12,6 +12,7 @@ public class CurrentConditionsDisplay implements Observer, DisplayElement {
 
     public CurrentConditionsDisplay(WeatherSubject weatherData) {
         this.weatherData = weatherData;
+        this.subscribe();
     }
 
     public void subscribe() {

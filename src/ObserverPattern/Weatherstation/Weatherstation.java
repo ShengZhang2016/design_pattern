@@ -11,17 +11,15 @@ public class Weatherstation {
         WeatherObservable weatherObservable = new WeatherObservable();
 
         CurrentConditionsDisplay currentDisplay = new CurrentConditionsDisplay(weatherObservable);
-        CurrentConditionsDisplay currentDisplay2 = new CurrentConditionsDisplay(weatherObservable);
-
-        currentDisplay.subscribe();
+//        CurrentConditionsDisplay currentDisplay2 = new CurrentConditionsDisplay(weatherObservable);
 
         weatherObservable.setParam(10, 65, 30);
         weatherObservable.setParam(11, 63, 33);
         weatherObservable.setParam(14, 75, 38);
 
-        currentDisplay2.unsubscribe(); // throw exception, unable to un-subscribe.
+//        currentDisplay2.unsubscribe(); // throw exception, unable to un-subscribe.
 
-        currentDisplay.unsubscribe();
+//        currentDisplay.unsubscribe();
 
         weatherObservable.setParam(10, 65, 30);
         weatherObservable.setParam(11, 63, 33);
